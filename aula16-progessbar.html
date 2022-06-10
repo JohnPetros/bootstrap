@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CFB Curso - Curso de Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="progress" style="height: 30px;">
+         <div id="pbl" class="progress-bar bg-primary progress-bar-striped" style="width: 50%;">
+        </div>
+    </div>
+
+    <br>
+
+   <div class="container">
+       <div class="progress" style="height: 30px;">
+        <div id="pbl" class="progress-bar bg-primary" style="width: 50%;">50%</div>
+        <div id="pbl" class="progress-bar bg-success" style="width: 25%;">25%</div>
+        <div id="pbl" class="progress-bar bg-danger" style="width: 15%;">15%</div>
+        <div id="pbl" class="progress-bar bg-warning" style="width: 10%;">10%</div>
+       </div>
+   </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script>
+        let barra = document.getElementById('pbl')
+        let carga = 0
+        let intBarra = setInterval(() => {
+            barra.innerHTML = carga + '%'
+           barra.style.width = carga + '%'
+           carga++
+           if(carga>=100) {
+            carga = 0
+           }
+        }, 100);
+    </script>
+  </body>
+</html>
